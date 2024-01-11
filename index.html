@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Password Protection</h1>
+
+    <form id="passwordForm">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" required>
+        <button type="button" onclick="checkPassword()">Submit</button>
+    </form>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById('password').value;
+            var correctPassword = 'subscribe_akashdip'; // Change this to your desired password
+
+            if (enteredPassword === correctPassword) {
+                window.location.href = 'https://engineering-college-btech.github.io/custom-video-player/index.html';
+            } else {
+                window.location.href = '404.html'; // Change this to your custom 404 error page
+            }
+        }
+    </script>
+
+</body>
+</html>
