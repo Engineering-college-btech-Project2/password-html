@@ -5,7 +5,7 @@
 
         // Function to redirect to another page
         function redirectToAnotherPage() {
-            window.location.href = '404.html';
+            window.location.href = 'pRi3sEnI4tIoN7pAsS8wOrD.html';
         }
 
         // Check if the user is on a desktop and redirect if true
