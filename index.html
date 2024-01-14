@@ -16,7 +16,8 @@
         }
 
         #loading-container {
-            width: 300px;
+            width: 80%;
+            max-width: 300px;
             text-align: center;
         }
 
@@ -26,6 +27,12 @@
             background-color: #3498db;
             border-radius: 4px;
             transition: width 0.3s ease;
+        }
+
+        @media (max-width: 600px) {
+            #loading-container {
+                width: 90%;
+            }
         }
     </style>
 </head>
