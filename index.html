@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        #loading-container {
+            width: 300px;
+            text-align: center;
+        }
+
+        #loading-bar {
+            width: 0;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-container">
+        <div id="loading-bar"></div>
+    </div>
+
+    <script>
+        let progress = 0;
+
+        function updateLoading() {
+            const loadingBar = document.getElementById('loading-bar');
+            loadingBar.style.width = `${progress}%`;
+
+            if (progress < 100) {
+                progress++;
+                setTimeout(updateLoading, 30);
+            } else {
+                setTimeout(() => {
+                    window.location.href = 'pRi3sEnT4tIoN7pAsS8wOrD.html';
+                }, 3000); // Redirect after 3 seconds
+            }
+        }
+
+        updateLoading();
+    </script>
+</body>
+</html>
