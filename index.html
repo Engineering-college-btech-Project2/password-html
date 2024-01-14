@@ -42,23 +42,27 @@
     </div>
 
     <script>
-        let progress = 0;
+    let progress = 0;
 
-        function updateLoading() {
-            const loadingBar = document.getElementById('loading-bar');
-            loadingBar.style.width = `${progress}%`;
+    function updateLoading() {
+        const loadingBar = document.getElementById('loading-bar');
+        loadingBar.style.width = `${progress}%`;
 
-            if (progress < 100) {
-                progress++;
-                setTimeout(updateLoading, 30);
-            } else {
-                setTimeout(() => {
-                    window.location.href = 'pRi3sEnT4tIoN7pAsS8wOrD.html';
-                }, 3000); // Redirect after 3 seconds
-            }
+        if (progress < 100) {
+            progress++;
+            setTimeout(updateLoading, 30);
+        } else {
+            // Redirect based on device type
+            const isDesktop = window.innerWidth > 600; // Adjust the breakpoint as needed
+            const redirectPage = isDesktop ? 'pRi3sEnI4tIoN7pAsS8wOrD.html' : 'pRi3sEnT4tIoN7pAsS8wOrD.html';
+
+            setTimeout(() => {
+                window.location.href = redirectPage;
+            }, 3000); // Redirect after 3 seconds
         }
+    }
 
-        updateLoading();
+    updateLoading();
     </script>
 </body>
 </html>
