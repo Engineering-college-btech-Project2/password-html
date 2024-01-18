@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loding ...Pass...</title>
+    <title>Password Protection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            transition: background-color 0.5s ease;
         }
-
 
         form {
             max-width: 400px;
@@ -32,21 +32,28 @@
         button {
             padding: 10px;
             cursor: pointer;
-            background-color: ##CCCCCC;
-             color: ##3498db;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        transition: background-color 0.3s ease;
-    
+            background-color: #CCCCCC;
+            color: #3498db;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-        background-color: #2980b9;
+            background-color: #2980b9;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-        transition: background-color 0.3s ease;
-    }
+            color: #fff;
+        }
+
+        button.wrong-password:hover {
+            background-color: #e74c3c;
+        }
+
+        button.correct-password:hover {
+            background-color: #27ae60;
+        }
 
         @media (max-width: 600px) {
             body {
@@ -58,7 +65,6 @@
             }
         }
     </style>
-
 </head>
 <body>
 
@@ -70,16 +76,22 @@
         <button type="button" onclick="checkPassword()">Submit</button>
     </form>
 
-    <script src="pRi3sEnT4tToN7pAsS8wOrD.js"></script>
     <script>
         function checkPassword() {
             var enteredPassword = document.getElementById('password').value;
             var correctPassword = 'subscribe_akashdip';
+            var body = document.body;
 
             if (enteredPassword === correctPassword) {
-                window.location.href = 'https://engineering-college-btech.github.io/custom-player-9-16/';
+                body.style.backgroundColor = '#27ae60'; // Green for correct password
+                setTimeout(() => {
+                    window.location.href = 'https://engineering-college-btech.github.io/custom-player-9-16/';
+                }, 500); // Redirect after 0.5 seconds
             } else {
-                window.location.href = 'pRi3sEnI4tIoN7pAsS8wOrD.html'; //4
+                body.style.backgroundColor = '#e74c3c'; // Red for wrong password
+                setTimeout(() => {
+                    window.location.href = 'pRi3sEnI4tIoN7pAsS8wOrD.html';
+                }, 500); // Redirect after 0.5 seconds
             }
         }
     </script>
