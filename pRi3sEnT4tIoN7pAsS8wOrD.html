@@ -11,6 +11,7 @@
             padding: 20px;
             transition: background-color 0.5s ease;
             position: relative;
+            min-height: 100vh; /* Ensure the body covers at least the full viewport height */
         }
 
         form {
@@ -48,18 +49,18 @@
         }
 
         .lock-icon {
-            position: absolute;
+            position: fixed;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             width: 30px;
             height: 40px;
-            background-color: #333;
+            background-color: #fff;
             border-radius: 5px 5px 0 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: #333;
             animation: bounce 1s infinite;
         }
 
