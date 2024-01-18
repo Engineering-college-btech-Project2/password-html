@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Screen</title>
+    <title>Welcome ...</title>
     <style>
         body {
             overflow: hidden;
@@ -64,17 +64,17 @@
 </head>
 <body>
     <div class="welcome-container fade-in" id="welcomeMessage">
-        <h1>use brave</h1>
+        <h1>be brave</h1>
         <div id="secondLine"></div>
     </div>
 
     <script>
         if (window.self !== window.top) {
             // Code is running in an app
-            document.getElementById('secondLine').innerHTML = '<h2>otherwise you get 404</h2>';
+            document.getElementById('secondLine').innerHTML = '<h2>otherwise 404 in life</h2>'; //otherwise you get 404
         } else {
             // Code is running in a browser
-            document.getElementById('secondLine').innerHTML = '<h2>otherwise you get 404</h2>';
+            document.getElementById('secondLine').innerHTML = '<h2>otherwise 404 in life</h2>'; //otherwise you get 404
             document.getElementById('welcomeMessage').classList.add('slide-in-left');
         }
 
